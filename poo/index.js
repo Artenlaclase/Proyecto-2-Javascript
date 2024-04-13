@@ -23,7 +23,7 @@ class Encuesta {
         alert("Luego de revisar la consola ");
         let answer = prompt (" Ingrese el número de la opción que se desea votar: ");
         answer = parseInt(answer);
-        if (isNaN(answer) ⎜⎜ answer < 1 ⎜⎜ answer > this.options.length) {
+        if (isNaN(answer) ||  answer < 1 ||  answer > this.options.length) {
             console.log(" Opcion no validad. Debe ingresar un número entre 1 y " + this.options.length);
             return this.votar(); // volver  asolicitar respuesta 
 
@@ -37,7 +37,7 @@ class Encuesta {
     mostrarResult () {
         console.log(" Resultado de la votación: ");
         this.options.forEach((option, index) => {
-            document.write (`${index +1}. ${option}: ${this.answers[index]} votos`);
+        console.log (`${index +1}. ${option}: ${this.answers[index]} votos`);
         })
     }
     realizarEncuesta(numVotantes){
@@ -74,8 +74,8 @@ for (let i = 0; i < n; i++) {
 // Votar
 
 questions. forEach( (question, index) => {
-    //console.log(`\nPregunta ${index + 1}`);
-    document.write(`\nPregunta ${index + 1}`);
+    console.log(`\nPregunta ${index + 1}`);
+    //document.write(`\nPregunta ${index + 1}`);
     question.realizarEncuesta(votantes);
 
 });
@@ -83,8 +83,8 @@ questions. forEach( (question, index) => {
 // Mostrar resultados 
 
 questions. forEach( (question, index) => {
-    //console.log(`\nResultado de la pregunta ${index + 1}:`);
-    document.write(`\nResultado de la pregunta ${index + 1}:`);
+    console.log(`\nResultado de la pregunta ${index + 1}:`);
+    //document.write(`\nResultado de la pregunta ${index + 1}:`);
     question.mostrarResult();
 
 });
