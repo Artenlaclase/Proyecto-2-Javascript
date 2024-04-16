@@ -54,14 +54,19 @@ class Encuesta {
 // Creando preguntas y alternativas
 
 let votantes = parseInt(prompt(" Ingrese el número de votantes ")); //encuestar a más personas 
-let n = parseInt(prompt(" Ingrese el número de preguntas ")); //Numero de preguntas 
+let numQuestion = parseInt(prompt(" Ingrese el número de preguntas ")); //Numero de preguntas 
 let questions = []
 
-for (let i = 0; i < n; i++) {
+for (let i = 0; i < numQuestion; i++) {
     let question = prompt(`Ingrese la pregunta ${i + 1}:`);
-    let numOptions = parseInt(prompt("Ingrese el número de alternativas:  "));
-    // buscar forma de cautelar que el numero de alternativas sea 2 y maximo a
-
+    let numOptions;// forma de cautelar que el numero de alternativas sea 2
+    while (true){
+        numOptions = parseInt(prompt("Ingrese el número de alternativas:  "));
+        if (numOptions >= 2) {
+            break;
+        }
+        alert("Ingresar 2 o mas alternativas.");
+    }
     let options = [];
     for (let j = 0; j < numOptions; j++) {
         options.push(prompt(`Ingrese la alternativa ${j + 1}:`));
@@ -69,7 +74,6 @@ for (let i = 0; i < n; i++) {
     questions.push(new Encuesta(question, options));
 
 }
-
 
 // Votar
 
