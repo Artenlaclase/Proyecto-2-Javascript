@@ -9,3 +9,14 @@ El objetivo principal de este proyecto es construir un programa en JavaScript qu
 - Uso de funciones, funciones de flecha y funciones anónimas.
 - Implementación de programación orientada a objetos (POO) o programación funcional (PF).
 - Uso de Git como sistema de control de versiones y colaborar en GitHub.
+
+
+Este codigo fue desarrollado con Javascript. 
+# Hola soy Raúl Rosales  
+
+Parte del Bootcamp UDD 
+Desarrollo fullStack C13
+
+Entrega  proyecto final Módulo 2.
+
+Abril, 2024
